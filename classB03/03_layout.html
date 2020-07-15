@@ -8,11 +8,56 @@
 		<style>
 			body, h1{margin:0}
 			a{color:#fff}
+			
 
+			.wrap{
+				width: 1024px;
+				margin : 0 auto;
+			}
 			.header{
 				background:#333;
 				color:#fff;
 				padding:20px;
+			}
+			.container{
+				display:flex;
+				height: 300px;
+			}
+			.container .section{
+				background-color: pink;
+				flex:1;
+			}
+			.container .aside{
+				background-color: cyan;
+				width:200px;
+			}
+			.footer{
+				background: #666;
+				height: 50px;
+			}
+			@media all and (max-width : 1024px){
+				.wrap{
+					width: 640px;
+				}
+				.container .aside{
+					width: 130px;
+				}
+			}
+			@media all and (max-width : 640px){
+				.wrap{
+					width:auto;
+				}
+				.container{
+					display:initial;   /* display : flex 를 원래 값으로 초기화 */
+					height: auto;
+				}
+				.container .section{
+					height: 300px;
+				}
+				.container .aside{
+					height: 100px;
+					width: auto;
+				}
 			}
 		</style>
 
@@ -28,8 +73,8 @@
 				</div>
 			</div>
 			<div class="container">
-					<div class="section"></div>
-					<div class="aside"></div>
+				<div class="section"></div>
+				<div class="aside"></div>
 			</div>
 			<div class="footer"></div>
 		</div>
