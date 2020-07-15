@@ -151,6 +151,7 @@
 		text-decoration: underline;
 	}
 	.header .nav a{
+		color:blue;
 		display: none;
 	}
 
