@@ -8,15 +8,22 @@
     
 		<style>
 			.wrap{padding:50px;text-align:center;}
-			.wrap .ipt{width:300px; height:50px; font-size:30px}
-		</style>
+      .wrap .ipt{width:300px; height:50px; font-size:30px}
+      .wrap .target{width: 200px; height: 100px; font-size: 40px; margin: 50px auto 0; line-height: 100px;}
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
 		<script>
-
+      $(function(){
+        $('.ipt').on('keydown',function(e){
+          $('.target').text(e.key);
+        })
+      })
 		</script>
   </head>
   <body>
     <div class="wrap">
-			<input type="text" class="ipt" />
+      <input type="text" class="ipt" />
+      <p class="target"></p>
     </div>
   </body>
 </html>
