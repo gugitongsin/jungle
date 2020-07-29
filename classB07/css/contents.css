@@ -17,6 +17,7 @@ body{
     background-color : #acc2d2;
     padding : 10px;
     border-radius: 5px;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -99,4 +100,13 @@ body{
 }
 .chat_wrap .txt_area input+input{
     margin-top : 5px;
+}
+
+
+
+/* MOBILE */
+
+@media all and (max-width : 768px){
+    body{padding: 0;}
+    .chat_wrap .inner{height: 100vh; box-sizing: border-box;}
 }
