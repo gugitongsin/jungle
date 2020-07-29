@@ -103,6 +103,12 @@
 	width:700px;
 	margin:0 auto;
 }
+.section.complete .ico_complete{
+	width:128px; height:128px; margin: 0 auto 50px; background: url('../img/ico_complete.png') no-repeat;
+}
+.hide{
+	position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; z-index: -1;
+}
 
 .section.complete .txt_number{
 	font-size: 30px;
@@ -112,4 +118,8 @@
 
 .section.complete .txt_price{
 	font-size:20px;
+}
+
+.section.complete .btn_reset{
+	margin : 30px auto;
 }
