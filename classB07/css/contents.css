@@ -107,6 +107,6 @@ body{
 /* MOBILE */
 
 @media all and (max-width : 768px){
-    body{padding: 0;}
-    .chat_wrap .inner{height: 100vh; box-sizing: border-box;}
+    body, html{padding: 0; height: 100%;}
+    .chat_wrap{width: 100%; height: 100%; box-sizing: border-box;}
 }
