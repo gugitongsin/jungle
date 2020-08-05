@@ -11,6 +11,13 @@ body{
     color:#333;
 }
 
+.chat_wrap.keypad_on .inner{
+    height : calc(100% - 360px);
+}
+.chat_wrap.keypad_on .txt_area{
+    bottom : 255px;
+}
+
 /* 채팅창 */
 .chat_wrap .inner{
     height: 350px;
@@ -117,4 +124,6 @@ body{
         height: 40px;
         font-size: 20px;
     }
+
+    /* 아이폰 같은 경우 키패드로 인해 전체가 위로 올라간다. */
 }

@@ -1,3 +1,6 @@
+var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgentAgent) ? true : false;
+
+
 $(function(){
     // 키보드 입력 이벤트
     $('input').on('keypress', function(e){
@@ -30,6 +33,21 @@ $(function(){
             },10); 
         }
     })
+
+    //아이폰일 경우 처리
+    if(isIos){
+        $('.txt_area input').on('focusin', function(){
+            setTimeout(function(){
+                $('.chat_wrap').addClass('keypad_on');
+                $('html, body').stop(true).animate({
+                    scrollTop : 0
+                }, 10);
+            }, 30); // 0.03 초: 키패드가 열리는 delay 시간
+        })
+        $('.txt_area input').on('focusout', function(){
+            $('.chat_wrap').removeClass('keypad_on');
+        })
+    }
 })
 
 //현재시간을 알아내고 값을 반환하는 함수
